@@ -1,0 +1,56 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU_isim_beh.exe -prj C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU_beh.prj work.TestCPU work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/FullAdder.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/triState.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/RippleCarryAdder.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Regsiter16.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/RegisterBit.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/decoder.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/RegisterBank.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Register16_PC.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Register16_MDB.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/InsDecoder.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/ALU_outer.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Datapath.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" into library work
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5019: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5027: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5035: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5043: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5051: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5059: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5067: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/Controller.v" Line 5075: Constant value is truncated to fit in <5> bits.
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/CPU.v" into library work
+Analyzing Verilog file "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU.v" into library work
+WARNING:HDLCompiler:568 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU.v" Line 98: Constant value is truncated to fit in <16> bits.
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/CPU.v" Line 39: Size mismatch in connection of port <funSel>. Formal port size is 2-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/CPU.v" Line 40: Size mismatch in connection of port <Flags>. Formal port size is 4-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module decoder
+Compiling module Register16
+Compiling module triState
+Compiling module RegisterBank
+Compiling module InsDecoder
+Compiling module RegisterBit
+Compiling module FullAdder
+Compiling module RippleCarryAdder
+Compiling module ALU_outer
+Compiling module Register16_MDB
+Compiling module Register16_PC
+Compiling module Datapath
+Compiling module Controller
+Compiling module CPU
+Compiling module TestCPU
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 Verilog Units
+Built simulation executable C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU_isim_beh.exe
+Fuse Memory Usage: 37752 KB
+Fuse CPU Usage: 561 ms

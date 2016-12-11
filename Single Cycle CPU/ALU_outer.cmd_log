@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Xilinx/SingleCycles/ALU_outer.xst" -ofn "Z:/Xilinx/SingleCycles/ALU_outer.syr" 

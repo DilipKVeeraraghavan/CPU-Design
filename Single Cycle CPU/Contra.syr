@@ -1,0 +1,722 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Contra.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Contra.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Contra"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : Contra
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "Z:\Xilinx\SingleCycles\Contra.v" into library work
+Parsing module <Contra>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Contra>.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 218: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 250: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 282: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 314: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 346: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 378: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 410: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "Z:\Xilinx\SingleCycles\Contra.v" Line 442: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Contra>.
+    Related source file is "Z:\Xilinx\SingleCycles\Contra.v".
+WARNING:Xst:647 - Input <IR<4:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit 8-to-1 multiplexer for signal <choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<1>> created at line 50.
+    Found 1-bit 8-to-1 multiplexer for signal <choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<0>> created at line 50.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseTworg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseTworg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseTworg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <writeChooserg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <writeChooserg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <writeChooserg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <inOrNot>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <outOrNot>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <funSelrg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <funSelrg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <choosePCUpdaterg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <choosePCUpdaterg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseOnerg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseOnerg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rChooseOnerg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  16 Latch(s).
+	inferred  51 Multiplexer(s).
+Unit <Contra> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 51
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 8-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment Z:\Xilinx\14.4\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment Z:\Xilinx\14.4\ISE_DS\ISE\.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 51
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 8-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Automotive Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    choosePCUpdaterg_0 in unit <Contra>
+    choosePCUpdaterg_1 in unit <Contra>
+    MemWrite in unit <Contra>
+    funSelrg_0 in unit <Contra>
+    funSelrg_1 in unit <Contra>
+    outOrNot in unit <Contra>
+    inOrNot in unit <Contra>
+
+
+Optimizing unit <Contra> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Contra, actual ratio is 0.
+Latch outOrNot has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Contra.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 46
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 15
+#      LUT4                        : 4
+#      LUT5                        : 13
+#      LUT6                        : 12
+# FlipFlops/Latches                : 17
+#      LD                          : 11
+#      LDC                         : 6
+# IO Buffers                       : 36
+#      IBUF                        : 15
+#      OBUF                        : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   45  out of  63400     0%  
+    Number used as Logic:                45  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     45
+   Number with an unused Flip Flop:      45  out of     45   100%  
+   Number with an unused LUT:             0  out of     45     0%  
+   Number of fully used LUT-FF pairs:     0  out of     45     0%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          41
+ Number of bonded IOBs:                  36  out of    210    17%  
+    IOB Flip Flops/Latches:              17
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+----------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)      | Load  |
+-------------------------------------------------+----------------------------+-------+
+IR[15]_IR[15]_OR_317_o(IR[15]_IR[15]_OR_317_o1:O)| NONE(*)(rChooseOnerg_2)    | 6     |
+IR[15]_IR[15]_OR_369_o(IR[15]_IR[15]_OR_369_o1:O)| NONE(*)(writeChooserg_1)   | 3     |
+inOrNot_G(inOrNot_G:O)                           | NONE(*)(inOrNot)           | 1     |
+outOrNot_G(outOrNot_G:O)                         | NONE(*)(outOrNot)          | 2     |
+funSelrg_1_G(funSelrg_1_G:O)                     | NONE(*)(funSelrg_1)        | 1     |
+funSelrg_0_G(funSelrg_0_G:O)                     | NONE(*)(funSelrg_0)        | 1     |
+MemWrite_G(MemWrite_G:O)                         | NONE(*)(MemWrite)          | 1     |
+choosePCUpdaterg_1_G(choosePCUpdaterg_1_G:O)     | NONE(*)(choosePCUpdaterg_1)| 1     |
+choosePCUpdaterg_0_G(choosePCUpdaterg_0_G:O)     | NONE(*)(choosePCUpdaterg_0)| 1     |
+-------------------------------------------------+----------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 1.963ns
+   Maximum output required time after clock: 0.811ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'IR[15]_IR[15]_OR_317_o'
+  Total number of paths / destination ports: 84 / 12
+-------------------------------------------------------------------------
+Offset:              1.832ns (Levels of Logic = 3)
+  Source:            IR<14> (PAD)
+  Destination:       rChooseTworg_1 (LATCH)
+  Destination Clock: IR[15]_IR[15]_OR_317_o falling
+
+  Data Path: IR<14> to rChooseTworg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.001   0.872  IR_14_IBUF (IR_14_IBUF)
+     LUT5:I0->O            3   0.097   0.765  Mmux_rChooseTworg[2]_IR[10]_mux_128_OUT<0>121 (Mmux_rChooseTworg[2]_IR[10]_mux_128_OUT<0>12)
+     LUT6:I0->O            1   0.097   0.000  Mmux_rChooseTworg[2]_IR[10]_mux_128_OUT<0>23 (rChooseTworg[2]_IR[10]_mux_128_OUT<0>)
+     LDC:D                    -0.028          rChooseTworg_0
+    ----------------------------------------
+    Total                      1.832ns (0.195ns logic, 1.637ns route)
+                                       (10.6% logic, 89.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'IR[15]_IR[15]_OR_369_o'
+  Total number of paths / destination ports: 18 / 3
+-------------------------------------------------------------------------
+Offset:              0.980ns (Levels of Logic = 2)
+  Source:            IR<12> (PAD)
+  Destination:       writeChooserg_1 (LATCH)
+  Destination Clock: IR[15]_IR[15]_OR_369_o falling
+
+  Data Path: IR<12> to writeChooserg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.001   0.882  IR_12_IBUF (IR_12_IBUF)
+     LUT6:I0->O            1   0.097   0.000  Mmux_writeChooserg[2]_IR[10]_mux_134_OUT<0>21 (writeChooserg[2]_IR[10]_mux_134_OUT<0>)
+     LD:D                     -0.028          writeChooserg_0
+    ----------------------------------------
+    Total                      0.980ns (0.098ns logic, 0.882ns route)
+                                       (10.0% logic, 90.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'inOrNot_G'
+  Total number of paths / destination ports: 9 / 1
+-------------------------------------------------------------------------
+Offset:              1.643ns (Levels of Logic = 3)
+  Source:            IR<12> (PAD)
+  Destination:       inOrNot (LATCH)
+  Destination Clock: inOrNot_G falling
+
+  Data Path: IR<12> to inOrNot
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.001   0.872  IR_12_IBUF (IR_12_IBUF)
+     LUT5:I0->O            2   0.097   0.576  IR[15]_GND_1_o_AND_6_o1 (IR[15]_GND_1_o_AND_6_o)
+     LUT3:I0->O            1   0.097   0.000  inOrNot_D (inOrNot_D)
+     LD:D                     -0.028          inOrNot
+    ----------------------------------------
+    Total                      1.643ns (0.195ns logic, 1.448ns route)
+                                       (11.9% logic, 88.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'outOrNot_G'
+  Total number of paths / destination ports: 20 / 2
+-------------------------------------------------------------------------
+Offset:              1.633ns (Levels of Logic = 3)
+  Source:            IR<13> (PAD)
+  Destination:       outOrNot (LATCH)
+  Destination Clock: outOrNot_G falling
+
+  Data Path: IR<13> to outOrNot
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   0.001   0.862  IR_13_IBUF (IR_13_IBUF)
+     LUT5:I0->O            2   0.097   0.576  IR[15]_GND_1_o_AND_8_o1 (IR[15]_GND_1_o_AND_8_o)
+     LUT3:I0->O            2   0.097   0.000  outOrNot_D (outOrNot_D)
+     LD:D                     -0.028          outOrNot
+    ----------------------------------------
+    Total                      1.633ns (0.195ns logic, 1.438ns route)
+                                       (11.9% logic, 88.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'funSelrg_1_G'
+  Total number of paths / destination ports: 9 / 1
+-------------------------------------------------------------------------
+Offset:              1.643ns (Levels of Logic = 3)
+  Source:            IR<15> (PAD)
+  Destination:       funSelrg_1 (LATCH)
+  Destination Clock: funSelrg_1_G falling
+
+  Data Path: IR<15> to funSelrg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   0.001   0.872  IR_15_IBUF (IR_15_IBUF)
+     LUT5:I0->O            2   0.097   0.576  IR[15]_GND_1_o_AND_18_o1 (IR[15]_GND_1_o_AND_18_o)
+     LUT3:I0->O            1   0.097   0.000  funSelrg_1_D (funSelrg_1_D)
+     LD:D                     -0.028          funSelrg_1
+    ----------------------------------------
+    Total                      1.643ns (0.195ns logic, 1.448ns route)
+                                       (11.9% logic, 88.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'funSelrg_0_G'
+  Total number of paths / destination ports: 9 / 1
+-------------------------------------------------------------------------
+Offset:              1.643ns (Levels of Logic = 3)
+  Source:            IR<14> (PAD)
+  Destination:       funSelrg_0 (LATCH)
+  Destination Clock: funSelrg_0_G falling
+
+  Data Path: IR<14> to funSelrg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.001   0.872  IR_14_IBUF (IR_14_IBUF)
+     LUT5:I0->O            2   0.097   0.576  IR[15]_GND_1_o_AND_20_o1 (IR[15]_GND_1_o_AND_20_o)
+     LUT3:I0->O            1   0.097   0.000  funSelrg_0_D (funSelrg_0_D)
+     LD:D                     -0.028          funSelrg_0
+    ----------------------------------------
+    Total                      1.643ns (0.195ns logic, 1.448ns route)
+                                       (11.9% logic, 88.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MemWrite_G'
+  Total number of paths / destination ports: 10 / 1
+-------------------------------------------------------------------------
+Offset:              1.643ns (Levels of Logic = 3)
+  Source:            IR<15> (PAD)
+  Destination:       MemWrite (LATCH)
+  Destination Clock: MemWrite_G falling
+
+  Data Path: IR<15> to MemWrite
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   0.001   0.872  IR_15_IBUF (IR_15_IBUF)
+     LUT5:I0->O            2   0.097   0.576  IR[15]_GND_1_o_AND_4_o1 (IR[15]_GND_1_o_AND_4_o)
+     LUT3:I0->O            1   0.097   0.000  MemWrite_D (MemWrite_D)
+     LD:D                     -0.028          MemWrite
+    ----------------------------------------
+    Total                      1.643ns (0.195ns logic, 1.448ns route)
+                                       (11.9% logic, 88.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'choosePCUpdaterg_1_G'
+  Total number of paths / destination ports: 23 / 1
+-------------------------------------------------------------------------
+Offset:              1.963ns (Levels of Logic = 4)
+  Source:            IR<14> (PAD)
+  Destination:       choosePCUpdaterg_1 (LATCH)
+  Destination Clock: choosePCUpdaterg_1_G falling
+
+  Data Path: IR<14> to choosePCUpdaterg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.001   0.872  IR_14_IBUF (IR_14_IBUF)
+     LUT6:I1->O            2   0.097   0.444  Mmux_choosePCUpdaterg[1]_PWR_1_o_mux_46_OUT21 (choosePCUpdaterg[1]_PWR_1_o_mux_46_OUT<1>)
+     LUT6:I4->O            1   0.097   0.355  Mmux_choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<1>11 (choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<1>)
+     LUT3:I2->O            1   0.097   0.000  choosePCUpdaterg_1_D (choosePCUpdaterg_1_D)
+     LD:D                     -0.028          choosePCUpdaterg_1
+    ----------------------------------------
+    Total                      1.963ns (0.292ns logic, 1.671ns route)
+                                       (14.9% logic, 85.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'choosePCUpdaterg_0_G'
+  Total number of paths / destination ports: 23 / 1
+-------------------------------------------------------------------------
+Offset:              1.963ns (Levels of Logic = 4)
+  Source:            IR<14> (PAD)
+  Destination:       choosePCUpdaterg_0 (LATCH)
+  Destination Clock: choosePCUpdaterg_0_G falling
+
+  Data Path: IR<14> to choosePCUpdaterg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.001   0.872  IR_14_IBUF (IR_14_IBUF)
+     LUT6:I1->O            2   0.097   0.444  Mmux_choosePCUpdaterg[1]_PWR_1_o_mux_46_OUT21 (choosePCUpdaterg[1]_PWR_1_o_mux_46_OUT<1>)
+     LUT6:I4->O            1   0.097   0.355  Mmux_choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<0>11 (choosePCUpdaterg[1]_PWR_1_o_mux_76_OUT<0>)
+     LUT3:I2->O            1   0.097   0.000  choosePCUpdaterg_0_D (choosePCUpdaterg_0_D)
+     LD:D                     -0.028          choosePCUpdaterg_0
+    ----------------------------------------
+    Total                      1.963ns (0.292ns logic, 1.671ns route)
+                                       (14.9% logic, 85.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'funSelrg_1_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            funSelrg_1 (LATCH)
+  Destination:       funSel<1> (PAD)
+  Source Clock:      funSelrg_1_G falling
+
+  Data Path: funSelrg_1 to funSel<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  funSelrg_1 (funSelrg_1)
+     OBUF:I->O                 0.000          funSel_1_OBUF (funSel<1>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'funSelrg_0_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            funSelrg_0 (LATCH)
+  Destination:       funSel<0> (PAD)
+  Source Clock:      funSelrg_0_G falling
+
+  Data Path: funSelrg_0 to funSel<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  funSelrg_0 (funSelrg_0)
+     OBUF:I->O                 0.000          funSel_0_OBUF (funSel<0>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'choosePCUpdaterg_1_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            choosePCUpdaterg_1 (LATCH)
+  Destination:       choosePCUpdate<1> (PAD)
+  Source Clock:      choosePCUpdaterg_1_G falling
+
+  Data Path: choosePCUpdaterg_1 to choosePCUpdate<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  choosePCUpdaterg_1 (choosePCUpdaterg_1)
+     OBUF:I->O                 0.000          choosePCUpdate_1_OBUF (choosePCUpdate<1>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'choosePCUpdaterg_0_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            choosePCUpdaterg_0 (LATCH)
+  Destination:       choosePCUpdate<0> (PAD)
+  Source Clock:      choosePCUpdaterg_0_G falling
+
+  Data Path: choosePCUpdaterg_0 to choosePCUpdate<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  choosePCUpdaterg_0 (choosePCUpdaterg_0)
+     OBUF:I->O                 0.000          choosePCUpdate_0_OBUF (choosePCUpdate<0>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IR[15]_IR[15]_OR_317_o'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            rChooseOnerg_2 (LATCH)
+  Destination:       rChooseOne<2> (PAD)
+  Source Clock:      IR[15]_IR[15]_OR_317_o falling
+
+  Data Path: rChooseOnerg_2 to rChooseOne<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.472   0.339  rChooseOnerg_2 (rChooseOnerg_2)
+     OBUF:I->O                 0.000          rChooseOne_2_OBUF (rChooseOne<2>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IR[15]_IR[15]_OR_369_o'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            writeChooserg_2 (LATCH)
+  Destination:       writeChoose<2> (PAD)
+  Source Clock:      IR[15]_IR[15]_OR_369_o falling
+
+  Data Path: writeChooserg_2 to writeChoose<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  writeChooserg_2 (writeChooserg_2)
+     OBUF:I->O                 0.000          writeChoose_2_OBUF (writeChoose<2>)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'inOrNot_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            inOrNot (LATCH)
+  Destination:       inOrNot (PAD)
+  Source Clock:      inOrNot_G falling
+
+  Data Path: inOrNot to inOrNot
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  inOrNot (inOrNot_OBUF)
+     OBUF:I->O                 0.000          inOrNot_OBUF (inOrNot)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'outOrNot_G'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            outOrNot_1 (LATCH)
+  Destination:       outOrNot (PAD)
+  Source Clock:      outOrNot_G falling
+
+  Data Path: outOrNot_1 to outOrNot
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  outOrNot_1 (outOrNot_1)
+     OBUF:I->O                 0.000          outOrNot_OBUF (outOrNot)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MemWrite_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            MemWrite (LATCH)
+  Destination:       MemWrite (PAD)
+  Source Clock:      MemWrite_G falling
+
+  Data Path: MemWrite to MemWrite
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  MemWrite (MemWrite_OBUF)
+     OBUF:I->O                 0.000          MemWrite_OBUF (MemWrite)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 81.00 secs
+Total CPU time to Xst completion: 81.25 secs
+ 
+--> 
+
+Total memory usage is 795240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

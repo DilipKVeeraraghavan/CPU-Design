@@ -1,0 +1,5 @@
+verilog work "FullAdder.v"
+verilog work "triState.v"
+verilog work "RippleCarryAdder.v"
+verilog work "RegisterBit.v"
+verilog work "ALU_outer.v"

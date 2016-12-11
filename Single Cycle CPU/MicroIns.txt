@@ -1,0 +1,190 @@
+
+
+LOAD :  00 
+
+
+li : 	00 000
+li r5, #100
+	1. ChooseOperand2 <- 0
+	2. FunSel <- 2'b10
+	3. ChooseWriteBack <- 0
+	4. inOrNot <- 1
+	5. writechoosein <- IR[10:8]
+
+lr :	00 001
+lr r5, r7
+	1. rchoose2 <- IR[10:8]
+	2. OutOrNot <- 1
+	3. chooseOperand2 <- 1
+	4. FunSel <- 2'b10
+	5. chooseWriteBack <- 0
+	6. inOrNot <- 1
+	7. writeChoose <- IR[7:5]
+
+STORE : 00 
+
+str :	00 010
+str r2,(r1)	  M[r1]<-r2
+	1. rchoose2 <- IR[7:5]
+	2. rchoose1 <- IR[10:8] 
+	3. outOrNot <- 1
+	4. chooseOperand2 <- 1
+	5. MemWrite <- 1
+	5. MemRead <- 0
+
+ALU : 01
+
+addi :	01 000
+addi r2,#100 
+	1. ChooseOperand2 <- 0
+	2. FunSel <- 2'b00
+	3. rchoose1 <- IR[10:8]
+	4. ChooseWriteBack <- 0
+	5. inOrNot <- 1
+	6. writechoosein <- IR[10:8]
+
+subi :	01 001
+subi r3,#100
+	1. ChooseOperand2 <- 0
+	2. FunSel <- 2'b01
+	3. rchoose1 <- IR[10:8]
+	3. ChooseWriteBack <- 0
+	4. inOrNot <- 1
+	5. writechoosein <- IR[10:8]
+
+mnsi :	01 010
+mnsi r3,#100
+	1. ChooseOperand2 <- 0
+	2. FunSel <- 2'b01
+	3. rchoose1 <- IR[10:8]
+	4. ChooseWriteBack <- 0
+
+addr :	01 100
+addr r4,r5
+	1. rchoose1 <- IR[10:8]
+	2. rchoose2 <- IR[7:5]
+	3. outOrNot <- 1
+	4. chooseOperand2 <- 1
+	5. FunSel <- 2'b00
+	6. chooseWriteBack <- 0
+	7. inOrNot <- 1
+	8. writechoose <- IR[10:8]
+
+subr :	01 101
+subr r4,r5
+	1. rchoose1 <- IR[10:8]
+	2. rchoose2 <- IR[7:5]
+	3. outOrNot <- 1
+	4. chooseOperand2 <- 1
+	5. FunSel <- 2'b01
+	6. chooseWriteBack <- 0
+	7. inOrNot <- 1
+	8. writechoose <- IR[10:8]
+
+
+mnsr :	01 110
+mnsr r4,r5
+	1. rchoose1 <- IR[10:8]
+	2. rchoose2 <- IR[7:5]
+	3. outOrNot <- 1
+	4. chooseOperand2 <- 1
+	5. FunSel <- 2'b01
+	6. chooseWriteBack <- 0
+
+
+cmp :	01 111
+cmp r1
+	1. rchoose2 <- IR[10:8]
+	2. OutOrNot >- 1
+	3. chooseOperand2 <- 1
+	4. FunSel <- 2'b11
+	5. chooseWriteBack <- 0
+	6. inOrNot <- 1
+	7. writeChoose <- IR[10:8]
+
+
+JUMP:10 and 11
+
+j :		10 000
+j  PC <- PC + M[PC]
+	1.choosePCUpdate <- 2'b01
+
+jz :	10 001
+jz
+	1. if(flags[0] == 1) begin
+		choosePCUpdate <- 1
+	end
+	else begin
+		choosePCUpdate <- 2
+	end
+
+jnz :	10 010
+jnz
+
+	1. if(flags[0] == 0) begin
+		choosePCUpdate <- 1
+	end
+	else begin
+		choosePCUpdate <- 2
+	end
+
+jc :	10 011
+jc 		
+
+	1. if(flags[0] == 1) begin
+		choosePCUpdate <- 1
+	end
+	else begin
+		choosePCUpdate <- 2
+	end
+
+jnc :	10 100
+jnc
+
+	1. if(flags[0] == 1) begin
+		choosePCUpdate <- 1
+	end
+	else begin
+		choosePCUpdate <- 2
+	end
+
+jv :	10 101
+jv 
+
+
+jnv :	10 110
+jnv
+
+
+jm :	10 111
+jm
+
+
+jnm :	11 000
+jnm
+
+
+jal :	11 001
+jal
+
+
+
+
+
+
+		//template
+	else if(IR[15:11]==5'b00001)begin
+		MemRead  <= 0;
+		MemWrite <= 0;
+		inOrNotrg <= 0;
+		outOrNotrg <= 0;
+		chooseOperand2rg <= 0;
+		chooseWriteBackrg <= 0;
+		ldRArg <= 0;
+		rstrg <=0;
+		funSelrg <= 2'd0;
+		choosePCUpdaterg <= 2'd0;
+		rChooseOnerg <= 3'd0;
+		rChooseTworg <= 3'b0;
+		writeChooserg <= 3'b0;
+	end

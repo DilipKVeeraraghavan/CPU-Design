@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Xilinx/SingleCycles/FourOneMUX16.xst" -ofn "Z:/Xilinx/SingleCycles/FourOneMUX16.syr" 

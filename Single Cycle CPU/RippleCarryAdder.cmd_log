@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Xilinx/SingleCycles/RippleCarryAdder.xst" -ofn "Z:/Xilinx/SingleCycles/RippleCarryAdder.syr" 

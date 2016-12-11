@@ -1,0 +1,4 @@
+verilog work "triState.v"
+verilog work "Register16.v"
+verilog work "decoder.v"
+verilog work "RegisterBank1.v"

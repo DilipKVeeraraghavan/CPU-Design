@@ -1,0 +1,53 @@
+Running: Z:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/Xilinx/SingleCycles/TestCPU_isim_beh.exe -prj Z:/Xilinx/SingleCycles/TestCPU_beh.prj work.TestCPU work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/TristateOne.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/FullAdder.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/TwoOneMUXonebit.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/triState.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/RippleCarryAdder.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/RegisterBit.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/Register16.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/FourOneMUXonebit.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/decoder.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/TwoOneMUX16.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/RegisterBank1.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/Register16LoadlessIR.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/Reg16Loadless.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/FourOneMUX16.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/ALU_outer.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/Datapath.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/Contra.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/CPU.v" into library work
+Analyzing Verilog file "Z:/Xilinx/SingleCycles/TestCPU.v" into library work
+Analyzing Verilog file "Z:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Contra
+Compiling module Register16
+Compiling module TristateOne
+Compiling module FourOneMUXonebit
+Compiling module FourOneMUX16
+Compiling module TwoOneMUXonebit
+Compiling module TwoOneMUX16
+Compiling module RegisterBit
+Compiling module FullAdder
+Compiling module RippleCarryAdder
+Compiling module triState
+Compiling module ALU_outer
+Compiling module Reg16LoadlessIR
+Compiling module Reg16Loadless
+Compiling module decoder
+Compiling module RegisterBank
+Compiling module Datapath
+Compiling module CPU
+Compiling module TestCPU
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 20 Verilog Units
+Built simulation executable Z:/Xilinx/SingleCycles/TestCPU_isim_beh.exe
+Fuse Memory Usage: 28732 KB
+Fuse CPU Usage: 1015 ms

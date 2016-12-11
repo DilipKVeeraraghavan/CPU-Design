@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "Z:/Xilinx/SingleCycles/RegisterBank.xst" -ofn "Z:/Xilinx/SingleCycles/RegisterBank.syr" 
+xst -intstyle ise -ifn "Z:/Xilinx/SingleCycles/RegisterBank.xst" -ofn "Z:/Xilinx/SingleCycles/RegisterBank.syr" 

@@ -1,0 +1,19 @@
+ISim log file
+Running: C:\Users\student\Downloads\CPU-20161028T083439Z\CPU\TestCPU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/TestCPU_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/CPU.v" Line 25.  For instance uut/path/, width 2 of formal port funSel is not equal to width 3 of actual signal funSel.
+WARNING: File "C:/Users/student/Downloads/CPU-20161028T083439Z/CPU/CPU.v" Line 40.  For instance uut/troller/, width 4 of formal port Flags is not equal to width 1 of actual signal Flags.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
